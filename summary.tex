@@ -1,0 +1,83 @@
+% ----------------------- TODO ---------------------------
+% Change per hand-in
+\newcommand{\NUMBER}{1} % exercise set number
+\newcommand{\EXERCISES}{5} % number of exercises
+
+\newcommand{\COURSECODE}{COURSE}
+\newcommand{\TITLE}{TITLE}
+\newcommand{\STUDENTA}{Jeroen Sangers - Applied Physics}
+\newcommand{\DEADLINE}{DEADLINE}
+\newcommand{\COURSENAME}{COURSENAME}
+% ----------------------- TODO ---------------------------
+
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{pdflscape}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{polynom}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{forloop}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{fancybox}
+\usepackage{tikz}
+\usepackage{siunitx}
+
+% Algorithm command
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+
+% Matrix notation
+\newcommand{\matr}[1]{\mathbf{#1}}
+
+% Margins
+\geometry{a4paper,left=3cm, right=3cm, top=3cm, bottom=3cm}
+
+% Header and footer setup
+\pagestyle {fancy}
+%\fancyhead[L]{Tutor: \TUTOR}
+\fancyhead[L]{\TITLE}
+\fancyhead[C]{\STUDENTA}
+\fancyhead[R]{\today}
+
+\fancyfoot[L]{\COURSECODE}
+\fancyfoot[C]{\COURSENAME}
+\fancyfoot[R]{Page \thepage /\pageref*{LastPage}}
+
+
+
+\begin{document}
+
+\subsection*{Acquiring an image using the phosphorous screen}
+\begin{enumerate}
+    \item Check the vacuum in the octagon and make sure the vacuum is lower than 20 Log, if so you can open the column valves.
+    \item Load the alignment files for the FEG and the operating mode of the microscope.
+    \item Open the column valves and check for a bundle.
+    \item Press the eucentric focus button to reset all displacements.
+    \item Using the sample z-height buttons try to minimise the contrast of the picture.
+    \item Further minimise the contrast of the picture by magnifying and then using the focus knob.
+\end{enumerate}
+
+\subsection*{High Resolution TEM image using digital Camera}
+\begin{enumerate}
+    \item Make sure the screen current is roughly less than \SI{10}{\nano \meter}.
+    \item Retract the phosphorous screen using the R1 button.
+    \item In the Velox camera software press the play button to start acquiring.
+    \item Open the fast fourier transform window on the top right.
+    \item By pressing the stigmator button and using the multifunction knobs correct the stigmator such that there are concentric circles visible in the FFT. Using the focus buttons make the circles larger. The most detail can be achieved if there are bright spots or rings on the edges of the FFT.
+    \item Acquire a HRTEM picture using the camera button in the top toolbar.
+    
+\end{enumerate}
+
+\end{document}
