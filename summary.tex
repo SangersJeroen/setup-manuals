@@ -3,11 +3,11 @@
 \newcommand{\NUMBER}{1} % exercise set number
 \newcommand{\EXERCISES}{5} % number of exercises
 
-\newcommand{\COURSECODE}{COURSE}
-\newcommand{\TITLE}{TITLE}
+\newcommand{\COURSECODE}{ }
+\newcommand{\TITLE}{Titan operation}
 \newcommand{\STUDENTA}{Jeroen Sangers - Applied Physics}
 \newcommand{\DEADLINE}{DEADLINE}
-\newcommand{\COURSENAME}{COURSENAME}
+\newcommand{\COURSENAME}{ }
 % ----------------------- TODO ---------------------------
 
 \documentclass[a4paper]{scrartcl}
@@ -34,6 +34,7 @@
 \usepackage{fancybox}
 \usepackage{tikz}
 \usepackage{siunitx}
+\usepackage{mathtools}
 
 % Algorithm command
 \newcommand*\Let[2]{\State #1 $\gets$ #2}
@@ -74,10 +75,36 @@
     \item Make sure the screen current is roughly less than \SI{10}{\nano \meter}.
     \item Retract the phosphorous screen using the R1 button.
     \item In the Velox camera software press the play button to start acquiring.
-    \item Open the fast fourier transform window on the top right.
+    \item Open the fast Fourier transform window on the top right.
     \item By pressing the stigmator button and using the multifunction knobs correct the stigmator such that there are concentric circles visible in the FFT. Using the focus buttons make the circles larger. The most detail can be achieved if there are bright spots or rings on the edges of the FFT.
     \item Acquire a HRTEM picture using the camera button in the top toolbar.
-    
+\end{enumerate}
+
+\subsection*{STEM imaging}
+\begin{enumerate}
+    \item Load alignment file for high tension STEM. (STEM \SI{300}{\kilo \volt}
+    \item In the Velox software activate the HAADF detector by clicking it in the column overview.
+    \item Make sure the Titan PC is in control of the electron beam deflection by checking that the box under the monitor is set to "INT SCAN".
+    \item Refocus on the sample using the same method as in the HRTEM section.
+    \item Pause the beam and set it to illuminate amorphous material.
+    \item Activate the condenser stigmator and correct the Ronchigram to show a flat circle in the beam.
+\end{enumerate}
+
+\subsection*{EDX}
+\begin{enumerate}
+    \item Re-check if the focus of is correct.
+    \item Select a region for the EDX inspection.
+    \item Select a region for the drift correction, make sure it has well-defined horizontal and vertical features.
+    \item Use the analysis toolset to analyse a region of interest.
+    \item Using the periodic table on the right of the screen you can select which elements you want to show.
+\end{enumerate}
+
+\subsection*{Shutting down}
+\begin{enumerate}
+    \item Close the column valves.
+    \item Center the stage using (Search) $\rightarrow$ (Stage) $\xrightarrow{\text{fly-out}}$ Reset Holder.
+    \item Take out the holder, remove the sample and reinsert it.
+    \item After octagon vacuum is sufficient, and the holder is fully inserted, turn of the turbo pump.
 \end{enumerate}
 
 \end{document}
