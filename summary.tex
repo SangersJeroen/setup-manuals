@@ -60,6 +60,7 @@
 
 \begin{document}
 
+\section{(S)TEM  Techniques}
 \subsection*{Acquiring an image using the phosphorous screen}
 \begin{enumerate}
     \item Check the vacuum in the octagon and make sure the vacuum is lower than 20 Log, if so you can open the column valves.
@@ -116,6 +117,20 @@
     \item Using the periodic table on the right of the screen you can select which elements you want to show.
 \end{enumerate}
 
+\subsection*{EMPAD}
+\begin{enumerate}
+    \item Enter STEM mode by loading a register or creating your own (following alignment steps).
+    \item Create a reference circle by using the HAADF detector as a guide and note its centres
+    \item Create two lines a vertical and a horizontal one and create a crosshair through the centre of the circle.
+    \item Adjust the Ronchigram to lie in the centre of the crosshair-like shape.
+    \item Connect to the EMPAD PC by opening "nomachine" and selecting "EMAPD-PC (New), yes it is misspelled". EMPAD PC is the second PC from the top in the rack.
+    \item Open the EMPAD GUI and open or create a project folder.
+    \item Make sure that the HAADF is retracted before inserting the EMPAD since the EMPAD doesn't know about the HAADF sensor.
+    \item Switch beam control to "EDX SCAN"
+    \item ALign the Ronchigram to the centre of the EMPAD detector by using the ROI and Cross options in the video screen. You can mark this location for convinience in the TEM user interface.
+    \item While "Acquire" is selected in the Scan Settings window you can take a image/dataset by pressing "Take".
+\end{enumerate}
+
 \subsection*{Shutting down}
 \begin{enumerate}
     \item Close the column valves.
@@ -123,6 +138,19 @@
     \item Take out the holder, remove the sample and reinsert it.
     \item After octagon vacuum is sufficient, and the holder is fully inserted, turn of the turbo pump.
 \end{enumerate}
+
+\section*{Diagnostics}
+\subsection*{Correcting dark and gain (Removing horizontal bars)}
+\begin{enumerate}
+    \item On the top left of the screen open the camera settings page.
+    \item Then select the CETA camera and open the fly-out.
+    \item In the fly-out menu open the "dark and gain" settings tab.
+    \item Press the singular button and load a correction file or the most recent one.    
+\end{enumerate}
+
+\subsection*{No beam control in STEM mode}
+No image using the HAADF or othe dark field detectors $\rightarrow$ check that beam control is on the Titan PC by having "INT SCAN" pressed.\\
+No image using the EMPAD detector $\rightarrow$ check that the beam control is given to the EMPAD PC by having the "EDX SCAN" button pressed.\\
 
 \end{document}
 
