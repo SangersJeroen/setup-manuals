@@ -35,12 +35,13 @@
 \usepackage{tikz}
 \usepackage{siunitx}
 \usepackage{mathtools}
+\usepackage{fontspec}
 
-% Algorithm command
 \newcommand*\Let[2]{\State #1 $\gets$ #2}
 
 % Matrix notation
 \newcommand{\matr}[1]{\mathbf{#1}}
+%\setmainfont{"Baskerville.ttf"}
 
 % Margins
 \geometry{a4paper,left=3cm, right=3cm, top=3cm, bottom=3cm}
@@ -61,6 +62,16 @@
 \begin{document}
 
 \section*{(S)TEM  Techniques}
+
+\subsubsection*{Inserting the holder}
+\begin{enumerate}
+    \item Align the small pin extending from the metal part of the holder with the angled line next to closed on the faceplate.
+    \item Insert the holder such that the O-ring seals the airlock.
+    \item Connect the cable and select the toolholder in the interface. Wait for the timer to run out such that the vacuum is high enough.
+    \item Hold the holder in such a way that you can resist the pull of the vacuum and rotate the holder counter-clockwise until the pin extending from the holder is aligned with the hole in the faceplate.
+\end{enumerate}
+
+
 \subsection*{Acquiring an image using the phosphorous screen}
 \begin{enumerate}
     \item Check the vacuum in the octagon and make sure the vacuum is lower than 20 Log, if so you can open the column valves.
@@ -130,6 +141,10 @@
     \item Align the Ronchigram to the centre of the EMPAD detector by using the ROI and Cross options in the video screen. You can mark this location for convinience in the TEM user interface.
     \item While "Acquire" is selected in the Scan Settings window you can take a image/dataset by pressing "Take".
     \item Shutdown the EMPAD and retract the sensor from the column.
+    \item {\subsubsection*{Optimising the conditions of the electron beam}
+          \begin{enumerate}
+              \item Will follow later            
+          \end{enumerate}}
 \end{enumerate}
 
 \subsection*{Shutting down}
