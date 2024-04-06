@@ -1,3 +1,9 @@
 !/.gitignore
 !/summary.tex
 !/summary.pdf
+**/*.aux
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.out
+**/*.synctex.gz
