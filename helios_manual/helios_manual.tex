@@ -1,0 +1,111 @@
+% ----------------------- TODO ---------------------------
+% Change per hand-in
+\newcommand{\NUMBER}{1} % exercise set number
+\newcommand{\EXERCISES}{5} % number of exercises
+
+\newcommand{\COURSECODE}{ }
+\newcommand{\TITLE}{Helios FIB operation}
+\newcommand{\STUDENTA}{Jeroen Sangers - Applied Physics}
+\newcommand{\DEADLINE}{DEADLINE}
+\newcommand{\COURSENAME}{ }
+% ----------------------- TODO ---------------------------
+
+\documentclass[a4paper]{scrartcl}
+
+% \usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{pdflscape}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{polynom}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{forloop}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{fancybox}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{fontspec}
+\usepackage{soul}
+
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+
+% Matrix notation
+\newcommand{\matr}[1]{\mathbf{#1}}
+
+% Custom units
+\DeclareSIUnit\bar{bar}
+
+% Margins
+\geometry{a4paper,left=3cm, right=3cm, top=3cm, bottom=3cm}
+
+% Colours
+\definecolor{warning}{HTML}{DA073B}
+
+% Header and footer setup
+\pagestyle {fancy}
+\fancyhead[L]{\TITLE}
+\fancyhead[C]{\STUDENTA}
+\fancyhead[R]{\today}
+
+\fancyfoot[L]{\COURSECODE}
+\fancyfoot[C]{\COURSENAME}
+\fancyfoot[R]{Page \thepage /\pageref*{LastPage}}
+
+\setmainfont{Noto Sans}
+
+\begin{document}
+
+\section*{Waking and Loading}
+\begin{enumerate}
+	\item Look at the card on the side of the Focused Ion Beam (FIB); is the machine up?
+	\item Log into the FIB software interface and note the main chamber pressure which can be found on the bottom left of the main screen. This value has to be below \SI{2E-10}{\milli \bar} and logged on the Excel sheet.
+	\item Wake the machine if it is not already awoken and turn off both the electron and ion beam. Switching between the beams is done by pressing the respective view quadrants on the main window. The respective beam is switched off when the button is gray.
+	\item  Vent the chamber by pressing the vent button in the interface.
+	\item Opening the chamber is done carefully by first making sure that the camera is active, and the view is live, this can be done by looking for movement wile tapping the door. Slowly open the bay while looking at the live view to avoid crashes. Look into the chamber as you open the bay further.
+	\item \colorbox{warning!30}{\parbox{\linewidth}{When preparing a sample stub make sure that everything inside the preparation box and the main chamber is handled with gloves.}} Load a sample onto the stub with carbon tape and press it down gently. Using the stub tweezers load the stub onto the stage and tighten the appropriate holding screw.
+	\item Close the loading bay while looking out for crashing, use the live view camera when you can no longer see into the main chamber. Firmly press the bay into the chamber and click pump on the interface. Hold the bay until the vacuum pump kicks in!
+	\item For ease of navigation, a navicam photograph can be taken by pressing the appropriate button in the toolbar or using the keyboard hotkey combination `Ctrl+Shift+z'.
+\end{enumerate}
+
+\section*{Alignment}
+\begin{enumerate}
+	\item Turn on the electron beam, to start scanning press the appropriate button or `F6'. Use auto-brightness if necessary. Typical beam settings are acceleration voltage $V_{acc}=$ \SI{15}{\kilo \volt} and beam current $I_{beam}=$ \SI{43}{\pico \ampere}.
+	\item Find a particle on the surface and do a rough focus and astigmatism correction. Magnify to at least \SI{1500}{\times} and perform fine focus and astigmatism correction.
+	\item In the rightmost toolbar select the navigation panel. In the topmost toolbar press `link z' to set the height to be determined by the working distance of the polepiece. \colorbox{warning!30}{If z height is positive downwards, proceed} with bringing the stage up to \SI{20}{\milli \meter}. This is done by hovering a finger over the `escape' button to cancel any movement in case of an imminent crash and pressing the z height in the navigation menu, entering \SI{20}{\milli \meter} and pressing enter.
+	\item Adjust focus and astigmatism correction. In the same manner as before increase z height to \SI{10}{\milli \meter}. And repeat both the focusing and raising step for \SI{5}{\milli \meter} and \SI{4}{\milli \meter}.
+	\item The ion beam is harsh to the sample even in conservative beam settings to perform its alignment away from any important regions. Typical beam conditions for imaging are an acceleration voltage of $V_{acc}=$ \SI{30}{\kilo \volt} and a beam current of $I_{beam}=$ \SI{7.7}{\pico \ampere}. Turn on the beam by pressing `beam on' after selecting the ion beam quadrant in the display.
+	\item To bring the working distance to eucentric height, place the crosshair of the electron beam on an identifiable feature and rotate the stage to \SI{15}{\degree} using the navigation pane. In this same pane \colorbox{warning!30}{click} on the raise or lower side of the change height bar such that the drifted crosshair moves back to the identifiable feature. Repeat this step for all angles up to \SI{52}{\degree} by incrementing with \SI{15}{\degree} at a time.
+	\item Repeat the same procedure whilst decreasing the angle from \SI{52}{\degree} back to \SI{0}{\degree}.
+	\item To align both beams to the same feature, first align the ion beam to a feature. Then, since the electron beam is more mobile, align the electron beam using the beam shift knobs to the same feature.
+\end{enumerate}
+
+\section*{Deposition and Milling}
+\begin{enumerate}
+	\item To start deposition or milling insert the multichem 4 gas needles by going to the patterning control tab in the rightmost toolbar, click gas injection and select multichem 4.
+	\item Heat the gas precursor you wish to use for \SI{10}{\minute}.
+	\item Close both the beam columns by selecting the correct quadrant view and pressing the `beam on' buttons such that they turn gray. Then flush the gas needle by setting the flow to \SI{0.2}{\percent} and wait for it to stabilise at or below \SI{2E-10}{\milli \bar}. Double flow rate every time the vacuum stabilises until a flow rate of \SI{80}{\percent} is reached.
+	\item Stop injecting the precursor gas and open the column valves. Refocus and relink z.
+	\item For milling; draw the necessary patterns in the ion beam quadrant view and select the Silicon recipe in the patterning window on the right. A typical beam current range is high \si{\pico \ampere} to \SI{1.1}{\nano \ampere}. Press the start patterning button in the top toolbar to perform the recipe.
+	\item For deposition; similarly, draw patterns in the ion beam view quadrant and select the recipe corresponding to the precursor to be used. The beam current needs to be calculated to match the surface area of the drawn pattern such that a beam current between \SI{2}{\times} and \SI{6}{\times} the surface area is used. i.e. a surface area of \SI{8}{\micro \meter \squared} needs $I_{beam}=$ \SI{16}{\pico \ampere} - \SI{48}{\pico \ampere}. Press the start patterning button in the top toolbar to perform the recipe.
+\end{enumerate}
+
+\section*{Diagnostics}
+\subsection*{MGIS}
+\textbf{Heating failure} of desired gas precursor is commonly caused by another heater warming the sensor of the desired heater. To resolve the problem, first try turning of the heater that has been left on in the MGIS diagnostics panel. This panel can be found in the activity center window. Turning off the troublesome heater can be performed by right-clicking the heater block and turning it off. If this does not resolve the problem one can go to the diagnostics panel by pressing "DIAG" in the bottom right of the MGIS diagnostics panel. Wait for the formation to show up and then press "reset MGIS". Turning on the desired heater should now work.
+
+\subsection*{Ion beam}
+\textbf{Ion beam can not be toggled} or turned on. This is caused by the beam being turned off before fully turning on or sleeping the system before it has been fully awoken. Attempt a fix by first turning of the Helios GUI in the activity panel. If this does not resolve the problem then one should restart the full Helios server.
+
+\end{document}
+

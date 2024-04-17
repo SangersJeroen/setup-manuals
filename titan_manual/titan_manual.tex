@@ -12,7 +12,7 @@
 
 \documentclass[a4paper]{scrartcl}
 
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage[british]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -41,14 +41,12 @@
 
 % Matrix notation
 \newcommand{\matr}[1]{\mathbf{#1}}
-%\setmainfont{"Baskerville.ttf"}
 
 % Margins
 \geometry{a4paper,left=3cm, right=3cm, top=3cm, bottom=3cm}
 
 % Header and footer setup
 \pagestyle {fancy}
-%\fancyhead[L]{Tutor: \TUTOR}
 \fancyhead[L]{\TITLE}
 \fancyhead[C]{\STUDENTA}
 \fancyhead[R]{\today}
@@ -57,7 +55,7 @@
 \fancyfoot[C]{\COURSENAME}
 \fancyfoot[R]{Page \thepage /\pageref*{LastPage}}
 
-
+\setmainfont{Noto Sans}
 
 \begin{document}
 
@@ -65,103 +63,103 @@
 
 \subsubsection*{Inserting the holder}
 \begin{enumerate}
-    \item Align the small pin extending from the metal part of the holder with the angled line next to closed on the faceplate.
-    \item Insert the holder such that the O-ring seals the airlock.
-    \item Connect the cable and select the toolholder in the interface. Wait for the timer to run out such that the vacuum is high enough.
-    \item Hold the holder in such a way that you can resist the pull of the vacuum and rotate the holder counter-clockwise until the pin extending from the holder is aligned with the hole in the faceplate.
+	\item Align the small pin extending from the metal part of the holder with the angled line next to closed on the faceplate.
+	\item Insert the holder such that the O-ring seals the airlock.
+	\item Connect the cable and select the toolholder in the interface. Wait for the timer to run out such that the vacuum is high enough.
+	\item Hold the holder in such a way that you can resist the pull of the vacuum and rotate the holder counter-clockwise until the pin extending from the holder is aligned with the hole in the faceplate.
 \end{enumerate}
 
 
 \subsection*{Acquiring an image using the phosphorous screen}
 \begin{enumerate}
-    \item Check the vacuum in the octagon and make sure the vacuum is lower than 20 Log, if so you can open the column valves.
-    \item Make sure the phosphorous screen is inserted into the optical column.
-    \item Load the alignment files for the FEG and the operating mode of the microscope.
-    \item Open the column valves and check for a bundle.
-    \item Press the eucentric focus button to reset all displacements.
-    \item Using the sample z-height buttons try to minimise the contrast of the picture.
-    \item Further minimise the contrast of the picture by magnifying and then using the focus knob.
+	\item Check the vacuum in the octagon and make sure the vacuum is lower than 20 Log, if so you can open the column valves.
+	\item Make sure the phosphorous screen is inserted into the optical column.
+	\item Load the alignment files for the FEG and the operating mode of the microscope.
+	\item Open the column valves and check for a bundle.
+	\item Press the eucentric focus button to reset all displacements.
+	\item Using the sample z-height buttons try to minimise the contrast of the picture.
+	\item Further minimise the contrast of the picture by magnifying and then using the focus knob.
 \end{enumerate}
 
 \subsection*{High Resolution TEM image using digital Camera}
 \begin{enumerate}
-    \item Make sure the screen current is roughly less than \SI{10}{\nano \ampere}.
-    \item Retract the phosphorous screen using the R1 button.
-    \item In the Velox camera software press the play button to start acquiring.
-    \item Before changing the beam intensity or magnification always reinsert the phosphorous screen
-    \item Open the fast Fourier transform window on the top right.
-    \item By pressing the stigmator button and using the multifunction knobs correct the stigmator such that there are concentric circles visible in the FFT. Using the focus buttons make the circles larger. The flat inner section of the innermost circle should fill most of the FFT image. 
-    \item The most detail can be achieved if there are bright spots or rings on the edges of the FFT.
-    \item Acquire a HRTEM picture using the camera button in the top toolbar.
+	\item Make sure the screen current is roughly less than \SI{10}{\nano \ampere}.
+	\item Retract the phosphorous screen using the R1 button.
+	\item In the Velox camera software press the play button to start acquiring.
+	\item Before changing the beam intensity or magnification always reinsert the phosphorous screen
+	\item Open the fast Fourier transform window on the top right.
+	\item By pressing the stigmator button and using the multifunction knobs correct the stigmator such that there are concentric circles visible in the FFT. Using the focus buttons make the circles larger. The flat inner section of the innermost circle should fill most of the FFT image.
+	\item The most detail can be achieved if there are bright spots or rings on the edges of the FFT.
+	\item Acquire a HRTEM picture using the camera button in the top toolbar.
 \end{enumerate}
 
 \subsection*{Diffraction Image}
 \begin{enumerate}
-    \item Spread the bundle as to illuminate the whole sample on a small magnification
-    \item Insert the largest aperture and centre.
-    \item Insert smaller apertures until only the selected area is illuminated.
-    \item Insert the beam stop through the button at the top of the screen.
-    \item Position the centre beam behind the beam stop such that the rings show on the phosphorous screen.
-    \item Use the focus knob to tune the focus such that the outermost rings are sharp.
-    \item Adjust the Velox camera settings to minimal exposure time and take a short live image.
-    \item Make sure that the individual bright counts are not too high.
-    \item Adjust exposure accordingly.
-    
+	\item Spread the bundle as to illuminate the whole sample on a small magnification
+	\item Insert the largest aperture and centre.
+	\item Insert smaller apertures until only the selected area is illuminated.
+	\item Insert the beam stop through the button at the top of the screen.
+	\item Position the centre beam behind the beam stop such that the rings show on the phosphorous screen.
+	\item Use the focus knob to tune the focus such that the outermost rings are sharp.
+	\item Adjust the Velox camera settings to minimal exposure time and take a short live image.
+	\item Make sure that the individual bright counts are not too high.
+	\item Adjust exposure accordingly.
+
 \end{enumerate}
 
 \subsection*{STEM imaging}
 \begin{enumerate}
-    \item Load alignment file for high tension STEM. (STEM \SI{300}{\kilo \volt})
-    \item In the Velox software activate the HAADF detector by clicking it in the column overview.
-    \item Make sure the Titan PC is in control of the electron beam deflection by checking that the box under the monitor is set to "INT SCAN".
-    \item Refocus on the sample using the same method as in the HRTEM section.
-    \item Pause the beam and set it to illuminate amorphous material.
-    \item Activate the condenser stigmator and correct the Ronchigram to show a flat circle in the beam.
+	\item Load alignment file for high tension STEM. (STEM \SI{300}{\kilo \volt})
+	\item In the Velox software activate the HAADF detector by clicking it in the column overview.
+	\item Make sure the Titan PC is in control of the electron beam deflection by checking that the box under the monitor is set to "INT SCAN".
+	\item Refocus on the sample using the same method as in the HRTEM section.
+	\item Pause the beam and set it to illuminate amorphous material.
+	\item Activate the condenser stigmator and correct the Ronchigram to show a flat circle in the beam.
 \end{enumerate}
 
 \subsection*{EDX}
 \begin{enumerate}
-    \item Re-check if the focus of is correct.
-    \item Select a region for the EDX inspection.
-    \item Select a region for the drift correction, make sure it has well-defined horizontal and vertical features.
-    \item Use the analysis toolset to analyse a region of interest.
-    \item Using the periodic table on the right of the screen you can select which elements you want to show.
+	\item Re-check if the focus of is correct.
+	\item Select a region for the EDX inspection.
+	\item Select a region for the drift correction, make sure it has well-defined horizontal and vertical features.
+	\item Use the analysis toolset to analyse a region of interest.
+	\item Using the periodic table on the right of the screen you can select which elements you want to show.
 \end{enumerate}
 
 \subsection*{EMPAD}
 \begin{enumerate}
-    \item Enter STEM mode by loading a register or creating your own (following alignment steps).
-    \item Create a reference circle by using the HAADF detector as a guide and note its centres
-    \item Create two lines a vertical and a horizontal one and create a crosshair through the centre of the circle.
-    \item Adjust the Ronchigram to lie in the centre of the crosshair-like shape.
-    \item Connect to the EMPAD PC by opening "nomachine" and selecting "EMAPD-PC (New), yes it is misspelled". EMPAD PC is the second PC from the top in the rack.
-    \item Open the EMPAD GUI and open or create a project folder.
-    \item Make sure that the HAADF is retracted before inserting the EMPAD since the EMPAD doesn't know about the HAADF sensor.
-    \item Switch beam control to "EDX SCAN"
-    \item Align the Ronchigram to the centre of the EMPAD detector by using the ROI and Cross options in the video screen. You can mark this location for convinience in the TEM user interface.
-    \item While "Acquire" is selected in the Scan Settings window you can take a image/dataset by pressing "Take".
-    \item Shutdown the EMPAD and retract the sensor from the column.
-    \item {\subsubsection*{Optimising the conditions of the electron beam}
-          \begin{enumerate}
-              \item Will follow later            
-          \end{enumerate}}
+	\item Enter STEM mode by loading a register or creating your own (following alignment steps).
+	\item Create a reference circle by using the HAADF detector as a guide and note its centres
+	\item Create two lines a vertical and a horizontal one and create a crosshair through the centre of the circle.
+	\item Adjust the Ronchigram to lie in the centre of the crosshair-like shape.
+	\item Connect to the EMPAD PC by opening "nomachine" and selecting "EMAPD-PC (New), yes it is misspelled". EMPAD PC is the second PC from the top in the rack.
+	\item Open the EMPAD GUI and open or create a project folder.
+	\item Make sure that the HAADF is retracted before inserting the EMPAD since the EMPAD doesn't know about the HAADF sensor.
+	\item Switch beam control to "EDX SCAN"
+	\item Align the Ronchigram to the centre of the EMPAD detector by using the ROI and Cross options in the video screen. You can mark this location for convinience in the TEM user interface.
+	\item While "Acquire" is selected in the Scan Settings window you can take a image/dataset by pressing "Take".
+	\item Shutdown the EMPAD and retract the sensor from the column.
+	\item {\subsubsection*{Optimising the conditions of the electron beam}
+	      \begin{enumerate}
+		      \item Will follow later
+	      \end{enumerate}}
 \end{enumerate}
 
 \subsection*{Shutting down}
 \begin{enumerate}
-    \item Close the column valves.
-    \item Center the stage using (Search) $\rightarrow$ (Stage) $\xrightarrow{\text{fly-out}}$ Reset Holder.
-    \item Take out the holder, remove the sample and reinsert it.
-    \item After octagon vacuum is sufficient, and the holder is fully inserted, turn of the turbo pump.
+	\item Close the column valves.
+	\item Center the stage using (Search) $\rightarrow$ (Stage) $\xrightarrow{\text{fly-out}}$ Reset Holder.
+	\item Take out the holder, remove the sample and reinsert it.
+	\item After octagon vacuum is sufficient, and the holder is fully inserted, turn of the turbo pump.
 \end{enumerate}
 
 \section*{Diagnostics}
 \subsection*{Correcting dark and gain (Removing horizontal bars)}
 \begin{enumerate}
-    \item On the top left of the screen open the camera settings page.
-    \item Then select the CETA camera and open the fly-out.
-    \item In the fly-out menu open the "dark and gain" settings tab.
-    \item Press the singular button and load a correction file or the most recent one.    
+	\item On the top left of the screen open the camera settings page.
+	\item Then select the CETA camera and open the fly-out.
+	\item In the fly-out menu open the "dark and gain" settings tab.
+	\item Press the singular button and load a correction file or the most recent one.
 \end{enumerate}
 
 \subsection*{No beam control in STEM mode}
