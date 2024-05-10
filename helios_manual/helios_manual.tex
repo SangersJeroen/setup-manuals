@@ -62,14 +62,14 @@
 \fancyfoot[C]{\COURSENAME}
 \fancyfoot[R]{Page \thepage /\pageref*{LastPage}}
 
-\setmainfont{Noto Sans}
+\setmainfont{Inter}
 
 \begin{document}
 
 \section*{Waking and Loading}
 \begin{enumerate}
 	\item Look at the card on the side of the Focused Ion Beam (FIB); is the machine up?
-	\item Log into the FIB software interface and note the main chamber pressure which can be found on the bottom left of the main screen. This value has to be below \SI{2E-10}{\milli \bar} and logged on the Excel sheet.
+	\item Log into the FIB software interface and note the main chamber pressure which can be found on the bottom left of the main screen. This value has to be below \SI{2E-5}{\milli \bar} and logged on the Excel sheet.
 	\item Wake the machine if it is not already awoken and turn off both the electron and ion beam. Switching between the beams is done by pressing the respective view quadrants on the main window. The respective beam is switched off when the button is gray.
 	\item  Vent the chamber by pressing the vent button in the interface.
 	\item Opening the chamber is done carefully by first making sure that the camera is active, and the view is live, this can be done by looking for movement wile tapping the door. Slowly open the bay while looking at the live view to avoid crashes. Look into the chamber as you open the bay further.
@@ -102,7 +102,7 @@
 
 \section*{Diagnostics}
 \subsection*{MGIS}
-\textbf{Heating failure} of desired gas precursor is commonly caused by another heater warming the sensor of the desired heater. To resolve the problem, first try turning of the heater that has been left on in the MGIS diagnostics panel. This panel can be found in the activity center window. Turning off the troublesome heater can be performed by right-clicking the heater block and turning it off. If this does not resolve the problem one can go to the diagnostics panel by pressing "DIAG" in the bottom right of the MGIS diagnostics panel. Wait for the formation to show up and then press "reset MGIS". Turning on the desired heater should now work.
+\textbf{Heating failure} of desired gas precursor is commonly caused by another heater warming the sensor of the desired heater. To resolve the problem, first try turning of the heater that has been left on in the MGIS diagnostics panel. This panel can be found in the activity centre window. Turning off the troublesome heater can be performed by right-clicking the heater block and turning it off. If this does not resolve the problem one can go to the diagnostics panel by pressing "DIAG" in the bottom right of the MGIS diagnostics panel. Wait for the formation to show up and then press "reset MGIS". Turning on the desired heater should now work.
 
 \subsection*{Ion beam}
 \textbf{Ion beam can not be toggled} or turned on. This is caused by the beam being turned off before fully turning on or sleeping the system before it has been fully awoken. Attempt a fix by first turning of the Helios GUI in the activity panel. If this does not resolve the problem then one should restart the full Helios server.
