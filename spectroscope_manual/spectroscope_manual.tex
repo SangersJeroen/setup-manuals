@@ -78,11 +78,11 @@
 \subsection*{Sample Inspection}
 \begin{enumerate}
 	\item For cleanliness, prepare your sample on a glass microscope slide, these can be found in the drawers. Select the smallest magnifying objective on the revolving nosepiece and move the stage all the way down with the focus knob.\\
-		Place the glass slide with the sample on the stage.
+	      Place the glass slide with the sample on the stage.
 	\item Turn on the light bulb for the illumination mode you want to use. For transparent samples you can use both transmission or reflectance microscopy, for opaque samples you can only use reflectance. The switches and luminance controls are denoted by the blue and red dotted boxes in Figure~\ref{fig:illum_paths}.
 	\item Whilst looking through the eyepieces adjust focus until a sharp image appears. To better pinpoint where you are looking you can close the respective aperture of the illumination mode you are using to create a small bright spot on your sample and move the stage to the desired location.
 	\item To magnify your image further you can revolve the next larger magnifying objective into the optical path by rotating the revolving nosepiece clockwise until it `clicks` into position. Refocus using the fine focus knob. Repeat until the desired magnification is reached.\\
-		\colorbox{warning!30}{\parbox{\linewidth}{Watch out for crashes with the larger magnifying objectives!}}
+	      \colorbox{warning!30}{\parbox{\linewidth}{Watch out for crashes with the larger magnifying objectives!}}
 	\item When you are done using the microscope switch to the smallest magnifying objective by rotating the revolving nosepiece counter-clockwise. Lower the stage fully and turn off all the lights.
 \end{enumerate}
 
@@ -97,11 +97,11 @@
 
 \section*{Spectroscopy}
 \begin{figure}[h]
-\begin{center}
-	\includegraphics[width=0.5\textwidth, keepaspectratio]{figures/spectroscope.png}
-\end{center}
-\caption{Overview of the spectroscope. Highlighted is the socket where the USB-cable needs to be plugged in before use and unplugged after use.}
-\label{fig:spectroscope}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth, keepaspectratio]{figures/spectroscope.png}
+	\end{center}
+	\caption{Overview of the spectroscope. Highlighted is the socket where the USB-cable needs to be plugged in before use and unplugged after use.}
+	\label{fig:spectroscope}
 \end{figure}
 \subsection*{Software start-up}
 \begin{enumerate}
@@ -140,17 +140,17 @@
 	\item Trace `C` will now display the computed micro-reflectance spectrum. To improve the view right-click `C` and press `move to secondary axis`. You can now click the y-label on the right of the plot to change the limits. Change these limits to $0\%$ for the lower limit and $170\%$ for the upper limit. Adjust if needed.
 	\item To better read out the peak position you can click in the header `Marker`, then the `Marker 1` button or press `CTRL+1`. You can now move the marker and read out the value of its position in the pop-up.
 	\item For more advanced software features look at the `User Guide` on Teams or ask for help on options like smoothing, peak detection and exporting data.\\
-		Some other useful tips are included at the end of this document in the Tips section.
+	      Some other useful tips are included at the end of this document in the Tips section.
 \end{enumerate}
 \newpage
 
 \subsubsection*{Micro-transmittance spectroscopy}
 \begin{figure}[h]
-\begin{center}
-	\includegraphics[width=0.5\linewidth, keepaspectratio]{figures/kohler.png}
-\end{center}
-\caption{Overview of the left-hand side of the microscope body and stage assembly. Highlighted are the controls of interest for micro-transmittance spectroscopy, namely: in the blue dashed box is the field diaphragm for the transmission illumination; in the red dashed box is the field aperture; and; in the green dashed box is the objective condenser focus.}
-\label{fig:kohler}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth, keepaspectratio]{figures/kohler.png}
+	\end{center}
+	\caption{Overview of the left-hand side of the microscope body and stage assembly. Highlighted are the controls of interest for micro-transmittance spectroscopy, namely: in the blue dashed box is the field diaphragm for the transmission illumination; in the red dashed box is the field aperture; and; in the green dashed box is the objective condenser focus.}
+	\label{fig:kohler}
 \end{figure}
 
 \begin{enumerate}
@@ -160,6 +160,20 @@
 	\item To calculate the transmittance spectrum we need to compute $R/R_0$ where $R$ is the sample and $R_0$ the substrate. Computing this quantity is done by right-clicking trace `C` and selecting `Compute` → `User Defined` and filling in the formula `B/A` and pressing `Compute`.
 \end{enumerate}
 
+\newpage
+\section*{Tips}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\linewidth]{figures/light_reference.png}
+	\end{center}
+	\caption{Plot shows the relative intensity distribution spectra of both the unfiltered and filtered halogen EPI-illumination source. Due to the attenuation of the intensity distribution it is possible to set a higher exposure time and improve the signal-to-noise ratio in a certain interval of the captured spectrum. The lower plot shows the exciton energy ranges for 1 to 6 layers of material for several commonly inspected TMDs. Here, the red range denotes the `A` exciton of the TMDs and green, blue, and, black denote the `B`, `C`, and, `D` exciton respectively.}
+	\label{fig:refl_filt}
+\end{figure}
+
+\subsection*{Using colour filters}
+As can be seen in the upper plot of Figure \ref{fig:refl_filt} the light coming from an unfiltered halogen source is strongly peaked in the \SI{1.9}{\electronvolt} to \SI{2.2}{\electronvolt} range which in turn limits the maximum exposure time of the spectroscope. For selenium chalcogen atom TMDs this results in captured spectra with relatively low SNR in the region of interest around the `A` and `B` exciton that we use for thickness determination.
+To alleviate this problem somewhat we can insert a colour filter into the optical EPI-illumination column near the bulb. The ports for this are visible in Figure~\ref{fig:fibre} under the label `filter slider`.
 
 \end{document}
 
