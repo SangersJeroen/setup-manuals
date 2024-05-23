@@ -59,9 +59,9 @@
 
 \begin{document}
 
-\section*{(S)TEM  Techniques}
+\section*{Basic (S)TEM Operation}
 
-\subsubsection*{Inserting the holder}
+\subsection*{Inserting the holder}
 \begin{enumerate}
 	\item Align the small pin extending from the metal part of the holder with the angled line next to closed on the faceplate.
 	\item Insert the holder such that the O-ring seals the airlock.
@@ -150,8 +150,42 @@
 	\item Close the column valves.
 	\item Center the stage using (Search) $\rightarrow$ (Stage) $\xrightarrow{\text{fly-out}}$ Reset Holder.
 	\item Take out the holder, remove the sample and reinsert it.
-	\item After octagon vacuum is sufficient, and the holder is fully inserted, turn of the turbo pump.
+	\item After the holder is fully inserted, turn of the turbo pump.
 \end{enumerate}
+
+\section*{Aligning the column for High-Resolution TEM Imaging}
+\subsection*{FEG registers}
+FEG registers are configuration files that store the settings and/or positions of the lenses and apertures, loading such a register should therefore align the column for its respective imaging mode. Ideally a FEG register called `TEM 300kV ss5` will align the column for TEM imaging with \SI{300}{\kilo \volt} and a spot size of 5. In reality due to vibrations or temperature differences the column will slightly misalign over time and will need to be realigned manually, below the steps for achieving alignment are outlined. If no FEG registers are available and you can not locate your beam make sure to:
+\begin{itemize}
+	\item select the largest (150) C2 aperture 	
+	\item retract the selected area aperture
+	\item retract the objective aperture
+	\item defocus the objective lens (intensity knob clockwise)
+\end{itemize}
+
+\subsection*{Locating the sample}
+To begin your alignment first locate the region of your sample that you want to image and magnify to an intermediate `SA` magnification (\ge 20 k\times). Bring the sample to eucentric height by minimising the phase contrast on the fluorescent screen, do this by pressing the `Z+` or `Z-` buttons on the right-hand side of the controls. Once phase contrast is minimised you can press the `high contrast` button in the fluorescent screen toolbar to regain some contrast. Move your view and the beam to vacuum such that you can align over the vacuum. 
+
+\subsection*{Direct Alignments}
+The `direct alignments` panel is placed under the `Align` tab in the workspace browser on the left-hand side of the screen. When pressing one of the direct alignments the behaviour of the controls will change. For example, the `gun tilt` direct alignment will bind the multifunction knobs to changing the gun lens coils instead of the usual beam position. So, be careful when aligning. In case something went wrong, or you've lost the beam; you can reset and restart by reloading the FEG register. In the `direct alignments` panel there is also a tick box for `Auto Help` when toggled a help window will appear anytime you select a direct alignment. This window will give you a brief description on how to carry out the alignment.
+
+\subsection*{Aligning the C2 aperture (Direct Alignment)}
+When active the multifunction knobs will control the placement of the C2 aperture in the column. During the alignment the C2 lens will be repeatedly over- and under- focused, appearing as a disappearing and reappearing circle. When the C2 aperture is misaligned the two circles will appear on different sides of the caustic crossover point. The centres of the under focused and overfocused image of the aperture should coincide, this can be done by turning the multifunction knobs. It is advised to move one knob at a time until you are close to alignment after which the two circles might appear to "orbit" around one another, at this time one might need to turn both knobs at one. Alignment is achieved when the centres overlap, and it looks like you are viewing a bouncing ball from above. To make the alignment easier you can turn what would normally be the `focus step` ring to slow or speed up the over- and under focusing. If one circle is consistently larger than the other you can turn the `intensity` knob to balance the size of the circles.
+
+\subsection*{Correcting condenser astigmatism}
+To correct the condensor astigmatism tighten the beam using the intensity knob and place it next to the reference circle of the FluCam overlay. The after pressing the `condensor` button in the `stigmators` workspace use the multifunction knobs to get the beam as circular as possible.
+
+\subsection*{Gun tilt (Direct Alignment)}
+The goal of the gun tilt alignment is to maximise the intensity of the electron beam on the fluorescent screen. Turn the intensity knob to focus the beam to a caustic spot and centre it on the fluorescent screen. By clicking `gun tilt` the multifunction knobs will be bound to the deflection of the electron gun image in the focal point of the C2 lens. The goals are to turn the knobs in such a way that the screen current, which can be seen in the info section at the bottom of the screen, is maximised. To make the tuning easier you can press the fine button over the left multifunction knob to decrease sensitivity.
+
+\subsection*{Gun shift (Direct Alignment)}
+Gun shift alignment serves the purpose of decreasing the distance the beam "jumps" when changing spot sizes. As changing spot sizes changes the strength of the C1 lens it can move the image of the gun on the C2 lens' focal plane. To align switch to spot size 9, focus to a caustic spot, centre the spot using the `beam shift` direct alignment. Then switch back to spot size 3, focus to a caustic spot, and bring to the centre of the fluorescent screen by selecting the `gun shift` direct alignment. Changing spot sizes is done by pressing the `R3` button to increase and the `L3` button to decrease. If you lose the beam you can demagnify the image to correct the beam position and then magnify again to perfect the cantering. After this recheck your C2 alignment.
+
+\subsection*{Beam Shift (Direct Alignment)}
+Before carrying out the beam shift, it is best to recentre the C2 aperture. The beam shift alignment will bind the multifunction knobs to `beam shift (alignment)` which is different from the normal beam shift as this alignment will set the zero point for the beam to which it will return upon switching spot sizes. The goal of this alignment is to focus the beam to a caustic spot and centre this caustic as good as possible on the fluorescent screen.
+
+\subsection*{Rotation Center (Direct Alignment)}
+The alignment will make the rotation centre coincide with the optical axis of the column the result be that the FOV does not shift when changing the intensity. To align the rotation centre you will need to line up your crosshair with a distinct feature and press the `Rotation Center` direct alignment, this will start moving your view around the aligned feature. Using the multifunction knobs try to minimise the movement.
 
 \section*{Diagnostics}
 \subsection*{Correcting dark and gain (Removing horizontal bars)}
@@ -163,8 +197,28 @@
 \end{enumerate}
 
 \subsection*{No beam control in STEM mode}
-No image using the HAADF or othe dark field detectors $\rightarrow$ check that beam control is on the Titan PC by having "INT SCAN" pressed.\\
+No image using the HAADF or other dark field detectors $\rightarrow$ check that beam control is on the Titan PC by having "INT SCAN" pressed.\\
 No image using the EMPAD detector $\rightarrow$ check that the beam control is given to the EMPAD PC by having the "EDX SCAN" button pressed.\\
+
+\subsection*{Stage Disabled}
+Symptoms of a disabled stage are as follows: can not move stage with stick, no dialogue option to select holder, can reset holder position or red light on loading point.
+Resolve by unloading the holder from the Titan, then:
+\begin{enumerate}
+	\item Move to the Stage workspace
+	\item Click on the fly-out arrow and navigate to the rightmost tab called `settings`
+	\item Verify that the `enable` button is gray
+	\item Remove any holder and then press the `enable` button. It should turn orange.
+	\item Wait until the countdown of \SI{5}{\minute} has elapsed, and the button has turned yellow. During the countdown the stage will move to all its extremities and back. The grinding noise is therefore `normal`.
+	\item When the `enable` button is yellow, you can reinsert the holder.
+\end{enumerate}
+
+\subsection*{High Tension Off}
+High tension is off, and acceleration voltage is set to \SI{60}{\kilo \volt}.
+\begin{enumerate}
+	\item Ensure gun vacuum is of high quality. To check click the fly-out arrow on the workspace and verify that `igpi` is \SI{1}{\log}.
+	\item Press the `High Tension` button.
+	\item In the dropdown menu click the next voltage step. Verify that vacuum stays at same level, otherwise halt operation and toggle off high tension. If the voltage has stabilised repeat.
+\end{enumerate}
 
 \end{document}
 
