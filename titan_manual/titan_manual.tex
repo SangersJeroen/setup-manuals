@@ -171,7 +171,7 @@ The Titan microscope has three 'strongly excitable' condensor lenses; \textbf{C1
 \subsection*{Direct Alignments}
 The `direct alignments` panel is placed under the `Align` tab in the workspace browser on the left-hand side of the screen. When pressing one of the direct alignments the behaviour of the controls will change. For example, the `gun tilt` direct alignment will bind the multifunction knobs to changing the gun lens coils instead of the usual beam position. So, be careful when aligning. In case something went wrong, or you've lost the beam; you can reset and restart by reloading the FEG register. In the `direct alignments` panel there is also a tick box for `Auto Help` when toggled a help window will appear anytime you select a direct alignment. This window will give you a brief description on how to carry out the alignment.
 
-\subsection*{Aligning the \textbf{C2} aperture (Direct Alignment)}
+\subsection*{Aligning the \textbf{C2} aperture [Direct Alignment]}
 When active the multifunction knobs will control the placement of the \textbf{C2} aperture in the column. During the alignment the \textbf{C2} lens will be repeatedly over- and under- focused, appearing as a disappearing and reappearing circle. When the \textbf{C2} aperture is misaligned the two circles will appear on different sides of the caustic crossover point. The centres of the under focused and overfocused image of the aperture should coincide, this can be done by turning the multifunction knobs. It is advised to move one knob at a time until you are close to alignment after which the two circles might appear to "orbit" around one another, at this time one might need to turn both knobs at one. Alignment is achieved when the centres overlap, and it looks like you are viewing a bouncing ball from above. To make the alignment easier you can turn what would normally be the `focus step` ring to slow or speed up the over- and under focusing. If one circle is consistently larger than the other you can turn the `intensity` knob to balance the size of the circles.\\
 \textcolor{gray}{See also: \textit{Titan modes manual pages 3-4}}
 
@@ -179,19 +179,19 @@ When active the multifunction knobs will control the placement of the \textbf{C2
 To correct the condensor astigmatism tighten the beam using the intensity knob and place it next to the reference circle of the FluCam overlay. The after pressing the `condensor` button in the `stigmators` workspace use the multifunction knobs to get the beam as circular as possible.\\
 \textcolor{gray}{See also: \textit{Titan modes manual page 10}}
 
-\subsection*{Gun tilt (Direct Alignment)}
+\subsection*{Gun tilt [Direct Alignment]}
 The goal of the gun tilt alignment is to maximise the intensity of the electron beam on the fluorescent screen. Turn the intensity knob to focus the beam to a caustic spot and centre it on the fluorescent screen. By clicking `gun tilt` the multifunction knobs will be bound to the deflection of the electron gun image in the focal point of the \textbf{C2} lens. The goals are to turn the knobs in such a way that the screen current, which can be seen in the info section at the bottom of the screen, is maximised. To make the tuning easier you can press the fine button over the left multifunction knob to decrease sensitivity.
 
-\subsection*{Gun shift (Direct Alignment)}
+\subsection*{Gun shift [Direct Alignment]}
 Gun shift alignment serves the purpose of decreasing the distance the beam "jumps" when changing spot sizes. As changing spot sizes changes the strength of the \textbf{C1} lens it can move the image of the gun on the \textbf{C2} lens' focal plane. To align switch to spot size 9, focus to a caustic spot, centre the spot using the `beam shift` direct alignment. Then switch back to spot size 3, focus to a caustic spot, and bring to the centre of the fluorescent screen by selecting the `gun shift` direct alignment. Changing spot sizes is done by pressing the `R3` button to increase and the `L3` button to decrease. If you lose the beam you can demagnify the image to correct the beam position and then magnify again to perfect the cantering. After this recheck your \textbf{C2} alignment.
 
-\subsection*{Pivot point purity (Direct Alignment)}
+\subsection*{Pivot point purity [Direct Alignment]}
 Setting the pivot points for both the 'x' and 'y' lens pair correctly ensures point purity of the beam shift and tilt lenses thus ensuring that a beam shift will only shift the beam and not tilt it. Engaging the point purity alignment will wobble the beam tilt and shift lens pairs such that the image will jump between two positions that will overlap with no movement once point purity is corrected. The goal of the alignment is then to use the multifunction knobs to have both images appear in the same position.
 
-\subsection*{Beam Shift (Direct Alignment)}
+\subsection*{Beam Shift [Direct Alignment]}
 Before carrying out the beam shift, it is best to recentre the \textbf{C2} aperture. The beam shift alignment will bind the multifunction knobs to `beam shift (alignment)` which is different from the normal beam shift as this alignment will set the zero point for the beam to which it will return upon switching spot sizes. The goal of this alignment is to focus the beam to a caustic spot and centre this caustic as good as possible on the fluorescent screen.
 
-\subsection*{Rotation Center (Direct Alignment)}
+\subsection*{Rotation Center [Direct Alignment]}
 The alignment will make the rotation centre coincide with the optical axis of the column the result be that the field-of-view does not shift when changing the intensity. To align the rotation centre you will need to line up your crosshair with a distinct feature and press the `Rotation Center` direct alignment, this will start moving your view around the aligned feature. Using the multifunction knobs try to minimise the movement.
 
 \section*{Aligning the column for High-Resolution STEM Imaging}
@@ -214,6 +214,27 @@ Scanning Transmission Electron Microscopy (STEM) in the Titan is very flexible w
 \end{itemize}
 
 \subsection*{Pre-alignment}
+Before performing the STEM specific alignment steps there are a few steps in TEM mode that will make the subsequent procedure in STEM a lot easier. First of all it is advised that you first locate your sample in TEM mode as the low magnification STEM field-of-view is still smaller than a grid square. Secondly since in STEM mode the \textbf{C3} lens is weak or off it is advised to do the TEM alignment procedure with either the setting \textit{Free Ctrl \& C3 off} or \textit{Probe - Nanoprobe} mode selected in the \textit{Beam Settings} workset. Use an goal appropriate spot size during the (S)TEM alignment, this means:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|l}
+Goal         & Spot \\ \hline
+EDX (fast)   & 3-4  \\
+EDX (HR-ish) & 5-6  \\
+STEM generic & 6-7  \\
+HR-STEM      & 8+  
+\end{tabular}
+\end{table}
+
+\subsection*{Rough Alignment using Ronchigram}
+The ronchigram is the infinite magnification of the probe's interaction with an amorphous substrate and is used for rough alignment in STEM mode. Final alignment should be done with the STEM scan image.
+Use the stage `Z` height buttons to bring an amorphous part of the specimen to eucentric focus by looking for the ronchigram. When the ronchigram is found, select the featureless flat part with an appropriately sized aperture.
+
+\subsection*{Rotation Center (Focus) [Direct Alignment]}
+
+\subsection*{Rotation Center (Intensity) [Direct Alignment]}
+
 
 \section*{Tilting to zone axis, SAED, dark field imaging}
 
