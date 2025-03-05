@@ -81,40 +81,18 @@
 	\item Further minimise the contrast of the picture by magnifying and then using the focus knob.
 \end{enumerate}
 
-\subsection*{High Resolution TEM image using digital Camera}
-\begin{enumerate}
-	\item Make sure the screen current is roughly less than \SI{10}{\nano \ampere}.
-	\item Retract the phosphorous screen using the R1 button.
-	\item In the Velox camera software press the play button to start acquiring.
-	\item Before changing the beam intensity or magnification always reinsert the phosphorous screen
-	\item Open the fast Fourier transform window on the top right.
-	\item By pressing the stigmator button and using the multifunction knobs correct the stigmator such that there are concentric circles visible in the FFT. Using the focus buttons make the circles larger. The flat inner section of the innermost circle should fill most of the FFT image.
-	\item The most detail can be achieved if there are bright spots or rings on the edges of the FFT.
-	\item Acquire a HRTEM picture using the camera button in the top toolbar.
-\end{enumerate}
-
 \subsection*{Diffraction Image}
 \begin{enumerate}
 	\item Spread the bundle as to illuminate the whole sample on a small magnification
-	\item Insert the largest aperture and centre.
+	\item Insert the largest selected area aperture and centre.
 	\item Insert smaller apertures until only the selected area is illuminated.
+	\item Press the `diffraction` button on the right-hand panel.
 	\item Insert the beam stop through the button at the top of the screen.
 	\item Position the centre beam behind the beam stop such that the rings show on the phosphorous screen.
 	\item Use the focus knob to tune the focus such that the outermost rings are sharp.
 	\item Adjust the Velox camera settings to minimal exposure time and take a short live image.
 	\item Make sure that the individual bright counts are not too high.
 	\item Adjust exposure accordingly.
-
-\end{enumerate}
-
-\subsection*{STEM imaging}
-\begin{enumerate}
-	\item Load alignment file for high tension STEM. (STEM \SI{300}{\kilo \volt})
-	\item In the Velox software activate the HAADF detector by clicking it in the column overview.
-	\item Make sure the Titan PC is in control of the electron beam deflection by checking that the box under the monitor is set to "INT SCAN".
-	\item Refocus on the sample using the same method as in the HRTEM section.
-	\item Pause the beam and set it to illuminate amorphous material.
-	\item Activate the condenser stigmator and correct the Ronchigram to show a flat circle in the beam.
 \end{enumerate}
 
 \subsection*{EDX}
@@ -153,7 +131,7 @@
 \subsection*{FEG registers}
 FEG registers are configuration files that store the settings and/or positions of the lenses and apertures, loading such a register should therefore align the column for its respective imaging mode. Ideally a FEG register called `TEM 300kV ss5` will align the column for TEM imaging with \SI{300}{\kilo \volt} and a spot size of 5. In reality due to vibrations or temperature differences the column will slightly misalign over time and will need to be realigned manually, below the steps for achieving alignment are outlined. If no FEG registers are available and you can not locate your beam make sure to:
 \begin{itemize}
-	\item select the largest \SI{150}{\micro\meter} \textbf{C2} aperture 	
+	\item select the largest \SI{150}{\micro\meter} \textbf{C2} aperture
 	\item retract the selected area aperture
 	\item retract the objective aperture
 	\item defocus the objective lens (intensity knob clockwise)
@@ -194,55 +172,98 @@ Before carrying out the beam shift, it is best to recentre the \textbf{C2} apert
 \subsection*{Rotation Center [Direct Alignment]}
 The alignment will make the rotation centre coincide with the optical axis of the column the result be that the field-of-view does not shift when changing the intensity. To align the rotation centre you will need to line up your crosshair with a distinct feature and press the `Rotation Center` direct alignment, this will start moving your view around the aligned feature. Using the multifunction knobs try to minimise the movement.
 
+\section*{Tilting to zone axis, SAED, dark field imaging}
+
+\subsection*{High Resolution TEM imaging using the Ceta Camera}
+\begin{enumerate}
+	\item Make sure the screen current is roughly less than \SI{10}{\nano \ampere}.
+	\item Retract the phosphorous screen using the R1 button.
+	\item In the Velox camera software press the play button to start live imaging.
+	\item Before changing the beam intensity or magnification always reinsert the phosphorous screen
+	\item Check the expose of the camera by looking at the bar below the histogram of the counts in the top right of the Velox acquisition screen.
+	\item Open the fast Fourier transform window on the top right.
+	\item By pressing the stigmator button and using the multifunction knobs correct the stigmator such that there are concentric circles visible in the FFT. Using the focus buttons make the circles larger. The flat inner section of the innermost circle should fill most of the FFT image.
+	\item The most detail can be achieved if there are bright spots or rings on the edges of the FFT.
+	\item Acquire a HRTEM picture using the camera button in the top toolbar.
+\end{enumerate}
+
 \section*{Aligning the column for High-Resolution STEM Imaging}
 
 \subsection*{Considerations}
 Scanning Transmission Electron Microscopy (STEM) in the Titan is very flexible with a lot of knobs to turn and options to consider. We have the flexibility to choose between \textit{Microprobe} and \textit{Nanoprobe}, change the \textit{semi-convergence angle} $\alpha$, switch \textit{spotsize} and lastly choose a \textit{camera length}. A brief explanation of each setting is given below.\\
 \begin{itemize}
 	\item {\textbf{Probe Mode}\\
-		The probe can be set to either microprobe or nanoprobe mode in the Beam Settings workset. TEM illumination uses, by default, microprobe mode. In microprobe mode the maximum illuminated area is 5$\times$ larger but the divergence and/or convergence is 5$\times$ weaker. In nanoprobe the mini-condenser lens that is below \textbf{C3} is turned off whereas in microprobe mode it is turned on. Even though it is off the mini-condenser lens' stigmator can be used in nanoprobe mode.}
+	      The probe can be set to either microprobe or nanoprobe mode in the Beam Settings workset. TEM illumination uses, by default, microprobe mode. In microprobe mode the maximum illuminated area is 5$\times$ larger but the divergence and/or convergence is 5$\times$ weaker. In nanoprobe the mini-condenser lens that is below \textbf{C3} is turned off whereas in microprobe mode it is turned on. Even though it is off the mini-condenser lens' stigmator can be used in nanoprobe mode.}
 
-	\item{\textbf{Semi-convergence angle}
-		The semi-convergence angle $\alpha$ determines the angular radius of the conical probe shape and is mainly influenced by the aperture. In normal range nanoprobe mode to semi-convergence angle is continuously adjustable between roughly \SI{6}{\milli \radian} - \SI{30}{\milli \radian}, a larger range is available in large range mode. This can be selected, when \textit{Free Ctrl} is active, in the \textit{Beam Settings} workset. The Titan Condenser manual notes that the optimal resolution is achieved at a semi-convergence angle of \SI{10}{\milli \radian}. Note that this is the actual radius of the Ronchigram not the semi-convergence angle listed in the software as this is most likely the selected aperture.\\
-	The semi-convergence angle sets the electron modes which can be used for probe forming in the STEM system, selecting the `nice` modes should be done with an appropriately sized aperture.}
+	      \item{\textbf{Semi-convergence angle}
+	                  The semi-convergence angle $\alpha$ determines the angular radius of the conical probe shape and is mainly influenced by the aperture. In normal range nanoprobe mode to semi-convergence angle is continuously adjustable between roughly \SI{6}{\milli \radian} - \SI{30}{\milli \radian}, a larger range is available in large range mode. This can be selected, when \textit{Free Ctrl} is active, in the \textit{Beam Settings} workset. The Titan Condenser manual notes that the optimal resolution is achieved at a semi-convergence angle of \SI{10}{\milli \radian}. Note that this is the actual radius of the Ronchigram not the semi-convergence angle listed in the software as this is most likely the selected aperture.\\
+	                  The semi-convergence angle sets the electron modes which can be used for probe forming in the STEM system, selecting the `nice` modes should be done with an appropriately sized aperture.}
 
-	\item{\textbf{Spotsize}}
-		The spot size number is an indexing number between 1 and 11. It is an aligned preset for the first condenser lens \textbf{C1} and determines its strength. The spot size number tells you roughly how much the image of the electron gun is magnified by the \textbf{C1} lens, spot size 1 is the `weakest` lens-setting and yields the smallest magnification of the gun image. This small demagnification means that a large part of the image of the gun can be selected with the aperture thus yielding a large `spot` with high brightness. The higher the spot size number the greater the magnification of the gun image thus the smaller the part of the gun you are selecting with the \textbf{C2} aperture with the result being a smaller intensity but a smaller `spot` after demagnification by the rest of the condenser system.
+	      \item{\textbf{Spotsize}}
+	      The spot size number is an indexing number between 1 and 11. It is an aligned preset for the first condenser lens \textbf{C1} and determines its strength. The spot size number tells you roughly how much the image of the electron gun is magnified by the \textbf{C1} lens, spot size 1 is the `weakest` lens-setting and yields the smallest magnification of the gun image. This small demagnification means that a large part of the image of the gun can be selected with the aperture thus yielding a large `spot` with high brightness. The higher the spot size number the greater the magnification of the gun image thus the smaller the part of the gun you are selecting with the \textbf{C2} aperture with the result being a smaller intensity but a smaller `spot` after demagnification by the rest of the condenser system. Increasing spotsize number decreases the beam current by a factor of 2. A table below with current and probe sizes has been included.
 
-	\item{\textbf{Camera length}
-		Since in STEM mode the magnification knob is bound to change the scan size area we can not use this to enlarge the image on our fluscreen and later on the image on our detector. To achieve this in STEM mode we use the \textit{Camera length} in the `STEM Detector` workset. To visualise, imagine a cone whose tip is coinciding with the sample and a plane intersecting this cone at a right angle as a camera. Moving this plane closer or farther away will change the image of the sample on the plane, thus (de)magnifying the image. By changing the camera length when using a dark-field detector one can select which reflections of the crystal (disks in the CBED) are incident on the detector, when using the EMPAD or fluscreen the camera length will this magnify or demagnify the image on the respective screen or detector.}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		Spot [\#] & Aperture [μm] & Probe size [nm] & Beam current \\ \hline
+		3 & 70 & 3.22 & 4.01 \\
+		5 & 70 & 1.61 & 1.06 \\
+		7 & 70 & 0.73 & 0.26 \\
+		9 & 50 & 0.62 & 0.04
+	\end{tabular}
+\end{table}
+
+	\item \textbf{Gun Lens}
+	      The gun lens is an electrostatic lens positioned close to the field-emission gun of the microscope and its strength is proportional to the gun lens number that you can select in the beam settings panel, a number between 1 and 8. A stronger gun lens leads to a decrease in beam current but also demagnifies the image of the FEG.
+
+	      \item{\textbf{Camera length}
+	                  Since in STEM mode the magnification knob is bound to change the scan size area we can not use this to enlarge the image on our fluscreen and later on the image on our detector. To achieve this in STEM mode we use the \textit{Camera length} in the `STEM Detector` workset. To visualise, imagine a cone whose tip is coinciding with the sample and a plane intersecting this cone at a right angle as a camera. Moving this plane closer or farther away will change the image of the sample on the plane, thus (de)magnifying the image. By changing the camera length when using a dark-field detector one can select which reflections of the crystal (disks in the CBED) are incident on the detector, when using the EMPAD or fluscreen the camera length will this magnify or demagnify the image on the respective screen or detector.}
 \end{itemize}
 
 \subsection*{Pre-alignment}
-Before performing the STEM specific alignment steps there are a few steps in TEM mode that will make the subsequent procedure in STEM a lot easier. First of all it is advised that you first locate your sample in TEM mode as the low magnification STEM field-of-view is still smaller than a grid square. Secondly since in STEM mode the \textbf{C3} lens is weak or off it is advised to do the TEM alignment procedure with either the setting \textit{Free Ctrl \& C3 off} or \textit{Probe - Nanoprobe} mode selected in the \textit{Beam Settings} workset. Use an goal appropriate spot size during the (S)TEM alignment, this means:
+Before performing the STEM specific alignment steps there are a few steps in TEM mode that will make the subsequent procedure in STEM a lot easier. First of all it is advised that you first locate your sample in TEM mode as the low magnification STEM field-of-view is still smaller than a grid square. Secondly since in STEM mode the \textbf{C3} lens is weak or off it is advised to do the TEM alignment procedure with either the setting \textit{Free Ctrl \& C3 off} or \textit{Probe - Nanoprobe} mode selected in the \textit{Beam Settings} workset. Use a goal appropriate spot size during the (S)TEM alignment, this means:
 
 \begin{table}[h!]
-\centering
-\begin{tabular}{l|l}
-Goal         & Spot \\ \hline
-EDX (fast)   & 3-4  \\
-EDX (HR-ish) & 5-6  \\
-STEM generic & 6-7  \\
-HR-STEM      & 8+  
-\end{tabular}
+	\centering
+	\begin{tabular}{l|l}
+		Goal         & Spot \\ \hline
+		EDX (fast)   & 3-4  \\
+		EDX (HR-ish) & 5-6  \\
+		STEM generic & 6-7  \\
+		HR-STEM      & 8+
+	\end{tabular}
 \end{table}
 
 \subsection*{Rough Alignment using Ronchigram}
-The ronchigram is the infinite magnification of the probe's interaction with an amorphous substrate and is used for rough alignment in STEM mode. Final alignment should be done with the STEM scan image.
+When the column is switched to STEM mode the imaging is also switched to diffraction mode, and you will thus no longer see a real-space image on the FluCam; instead you will see the probe-forming aperture and the sample or the ronchigram. The ronchigram is the infinite magnification of the probe's interaction with an amorphous substrate and is used for rough alignment in STEM mode, it can only be seen when the probe-crossover is in the specimen plane. It can thus be used to bring the sample to the right height. Final alignment should be done with the STEM scan image. Switching back to non-diffraction mode will allow you to look at your physical probe.
 Use the stage `Z` height buttons to bring an amorphous part of the specimen to eucentric focus by looking for the ronchigram. When the ronchigram is found, select the featureless flat part with an appropriately sized aperture.
 
-\subsection*{Rotation Center (Focus) [Direct Alignment]}
+\subsubsection*{Fine Alignment}
+Before aligning it is worth checking that STEM focus is set to use the objective lens for focussing. Check this by going to the workset `STEM Imaging (Expert)` and in the `Focus` fly-out select `objective` in the top drop-down menu.\\
+Start aligning by first pressing the `eucentric` button on the right-hand panel to reset the condensor system and the objective lens to the values set by the supervisor alignment. Afterwards move the stage such that you have vacuum in the centre of your field-of-view and switch out of diffraction mode by pressing the `diffraction` button next to `eucentric` on the right-hand panel.
+You should be able to see the probe that you were imaging with, if you cant, try: retracting the HAADF, demagnifying and resetting the beam shift by selecting the beam shift direct alignment.
 
-\subsection*{Rotation Center (Intensity) [Direct Alignment]}
+\subsection*{Intensity list (Focus) [Direct Alignment]}
+Select the `Intensity List Focus` direct alignment to bind the condensor system focus to the focus knob on the right-hand panel. With this direct alignment active try focussing the beam to a caustic spot. If the beam does not approach a caustic spot and does not look spherical, you need to correct some residual astigmatism. To correct the objective astigmatism unfocus the beam and look for something amorphous, by looking at the FFT of the FluCam you can correct objective astigmatism. Moving back to vacuum, any residual astigmatism preventing a nice caustic spot will be the result of condensor astigmatism. Pressing done sets the C2- and objective lens current for the current session.
 
+\subsection*{Direct Alignment pivot point nP PP X \& Y [Direct Alignment]}
+Balance the pivot points with the multifunction knobs by ensuring the tips of the lobes on the screen touch such that the overall image looks like an 8 or a butterfly.
 
-\section*{Tilting to zone axis, SAED, dark field imaging}
+\subsection*{Rotation Center (Objective) [Direct Alignment]}
+Slightly defocus the probe with the focus knob. If your bright spot is not centred in the overall diffuse halo, do so by selecting the `Rotation Center (Objective)` direct alignment and turning the multifunction knobs.\\
+
+\noindent\textbf{Only use the Z-height for focussing, since the probe forming is now correctly set up with the previous alignments! Only do very fine focus of about 50 nanometres with the focus knob.}
+
 
 \section*{Energy Dispersive X-ray Spectroscopy}
 
 \section*{Electron Energy-Loss Spectroscopy techniques}
 
 \section*{4D-STEM techniques with the EMPAD}
+
+\subsection*{Strain measurement using the EWPC transform}
+
+\subsection*{First moment imaging}
 
 \section*{Diagnostics}
 \subsection*{Correcting dark and gain (Removing horizontal bars)}
