@@ -59,7 +59,7 @@
 
 \begin{document}
 
-\section*{Basic (S)TEM Operation}
+\section*{Basic Titan Operation}
 
 \subsection*{Inserting the holder}
 \begin{enumerate}
@@ -76,7 +76,7 @@
 	\item Make sure the phosphorous screen is inserted into the optical column.
 	\item Load the alignment files for the FEG and the operating mode of the microscope.
 	\item Open the column valves and check for a bundle.
-	\item Press the eucentric focus button to reset all displacements.
+	\item Press the eucentric focus button to reset all lens currents.
 	\item Using the sample z-height buttons try to minimise the contrast of the picture.
 	\item Further minimise the contrast of the picture by magnifying and then using the focus knob.
 \end{enumerate}
@@ -202,16 +202,16 @@ Scanning Transmission Electron Microscopy (STEM) in the Titan is very flexible w
 	      \item{\textbf{Spotsize}}
 	      The spot size number is an indexing number between 1 and 11. It is an aligned preset for the first condenser lens \textbf{C1} and determines its strength. The spot size number tells you roughly how much the image of the electron gun is magnified by the \textbf{C1} lens, spot size 1 is the `weakest` lens-setting and yields the smallest magnification of the gun image. This small demagnification means that a large part of the image of the gun can be selected with the aperture thus yielding a large `spot` with high brightness. The higher the spot size number the greater the magnification of the gun image thus the smaller the part of the gun you are selecting with the \textbf{C2} aperture with the result being a smaller intensity but a smaller `spot` after demagnification by the rest of the condenser system. Increasing spotsize number decreases the beam current by a factor of 2. A table below with current and probe sizes has been included.
 
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{c|c|c|c}
-		Spot [\#] & Aperture [μm] & Probe size [nm] & Beam current \\ \hline
-		3 & 70 & 3.22 & 4.01 \\
-		5 & 70 & 1.61 & 1.06 \\
-		7 & 70 & 0.73 & 0.26 \\
-		9 & 50 & 0.62 & 0.04
-	\end{tabular}
-\end{table}
+	      \begin{table}[h!]
+		      \centering
+		      \begin{tabular}{c|c|c|c}
+			      Spot [\#] & Aperture [μm] & Probe size [nm] & Beam current \\ \hline
+			      3         & 70            & 3.22            & 4.01         \\
+			      5         & 70            & 1.61            & 1.06         \\
+			      7         & 70            & 0.73            & 0.26         \\
+			      9         & 50            & 0.62            & 0.04
+		      \end{tabular}
+	      \end{table}
 
 	\item \textbf{Gun Lens}
 	      The gun lens is an electrostatic lens positioned close to the field-emission gun of the microscope and its strength is proportional to the gun lens number that you can select in the beam settings panel, a number between 1 and 8. A stronger gun lens leads to a decrease in beam current but also demagnifies the image of the FEG.
@@ -238,6 +238,18 @@ Before performing the STEM specific alignment steps there are a few steps in TEM
 When the column is switched to STEM mode the imaging is also switched to diffraction mode, and you will thus no longer see a real-space image on the FluCam; instead you will see the probe-forming aperture and the sample or the ronchigram. The ronchigram is the infinite magnification of the probe's interaction with an amorphous substrate and is used for rough alignment in STEM mode, it can only be seen when the probe-crossover is in the specimen plane. It can thus be used to bring the sample to the right height. Final alignment should be done with the STEM scan image. Switching back to non-diffraction mode will allow you to look at your physical probe.
 Use the stage `Z` height buttons to bring an amorphous part of the specimen to eucentric focus by looking for the ronchigram. When the ronchigram is found, select the featureless flat part with an appropriately sized aperture.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth, keepaspectratio]{resources/ronchs_and_probes.png}
+	\caption{
+		\textbf{A selection of ronchigrams and their resulting probes.}
+		\textbf{a)} The image of a probe whose crossover is at the correct height but sufficiently astigmatic as to not produce a ronchigram, it can be recognised by its distinct striations that do not connect at the centre.
+		\textbf{b)} Astigmatic but closed ronchigram, its probe is displayed as an inset. The condensor astigmatism can be observed in both the elliptical shape of the ronchigram and the uneven diffuse halo around the probe itself.
+		\textbf{c)} A well-corrected ronchigram and its probe. When selecting the featureless part of the ronchigram (dotted circle) with an appropriately sized aperture the circular probe displayed in the inset is formed.
+	}
+	\label{figure:ronchs_and_probes}
+\end{figure}
+
 \subsubsection*{Fine Alignment}
 Before aligning it is worth checking that STEM focus is set to use the objective lens for focussing. Check this by going to the workset `STEM Imaging (Expert)` and in the `Focus` fly-out select `objective` in the top drop-down menu.\\
 Start aligning by first pressing the `eucentric` button on the right-hand panel to reset the condensor system and the objective lens to the values set by the supervisor alignment. Afterwards move the stage such that you have vacuum in the centre of your field-of-view and switch out of diffraction mode by pressing the `diffraction` button next to `eucentric` on the right-hand panel.
@@ -258,6 +270,10 @@ Slightly defocus the probe with the focus knob. If your bright spot is not centr
 \section*{Energy Dispersive X-ray Spectroscopy}
 
 \section*{Electron Energy-Loss Spectroscopy techniques}
+\subsection*{Low-loss EELS}
+\subsection*{Core-loss EELS}
+\subsection*{Point Spectrum}
+\subsection*{Spectral Imaging}
 
 \section*{4D-STEM techniques with the EMPAD}
 
